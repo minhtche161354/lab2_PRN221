@@ -1,0 +1,41 @@
+﻿@page
+@model Lab2.Pages.CustomerFormModel
+@{
+    var CustomerInfo = Model.customerInfo;
+    if(CustomerInfo != null)
+    {
+        <h3>@Model.Message</h3>
+        <div asp-validation-summary="All"></div>
+        if(ModelState.IsValid)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <p><strong>Customer name:  </strong>@CustomerInfo.CustomerName</p>
+                    <p><strong>Customer email:  </strong>@CustomerInfo.Email</p>
+                    <p><strong>Customer YOB:  </strong>@CustomerInfo.YearOfBirth</p>
+                </div>
+            </div>
+        }
+    }
+}
+<h3>Customer information</h3>
+<form method = "post" class="m-2 p-3 bg-light">
+    <div class="form-group">
+        <label asp-for="@CustomerInfo.CustomerName"></label>
+        <input class="form-control" asp-for="@CustomerInfo.CustomerName"/>
+        <span asp-validation-for="@CustomerInfo.CustomerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@CustomerInfo.Email"></label>
+        <input class="form-control" asp-for="@CustomerInfo.Email"/>
+        <span asp-validation-for="@CustomerInfo.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@CustomerInfo.YearOfBirth"></label>
+        <input class="form-control" asp-for="@CustomerInfo.YearOfBirth" />
+        <span asp-validation-for="@CustomerInfo.YearOfBirth" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" asp-page="CustomerForm">Send</button>
+    </div>
+</form>
