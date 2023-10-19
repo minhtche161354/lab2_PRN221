@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WEB2\\Lab2\\Lab2.csproj": {}
+    "D:\\FPTU_STUDY\\KỲ8\\PRN221\\Homework\\LAB2\\Lab2\\Lab2.csproj": {}
   },
   "projects": {
-    "D:\\WEB2\\Lab2\\Lab2.csproj": {
+    "D:\\FPTU_STUDY\\KỲ8\\PRN221\\Homework\\LAB2\\Lab2\\Lab2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WEB2\\Lab2\\Lab2.csproj",
+        "projectUniqueName": "D:\\FPTU_STUDY\\KỲ8\\PRN221\\Homework\\LAB2\\Lab2\\Lab2.csproj",
         "projectName": "Lab2",
-        "projectPath": "D:\\WEB2\\Lab2\\Lab2.csproj",
-        "packagesPath": "C:\\Users\\Minhm\\.nuget\\packages\\",
-        "outputPath": "D:\\WEB2\\Lab2\\obj\\",
+        "projectPath": "D:\\FPTU_STUDY\\KỲ8\\PRN221\\Homework\\LAB2\\Lab2\\Lab2.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\FPTU_STUDY\\KỲ8\\PRN221\\Homework\\LAB2\\Lab2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Minhm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
