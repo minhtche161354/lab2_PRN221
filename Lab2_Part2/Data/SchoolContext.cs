@@ -18,5 +18,13 @@ namespace Lab2_Part2.Data
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
             modelBuilder.Entity<Student>().ToTable("Student");
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server = localhost\\SQLEXPRESS;Database = master;Trusted_Connection = True;",
+                    builder=>builder.EnableRetryOnFailure());
+            }
+        }
     }
 }

@@ -1,14 +1,32 @@
 using Lab2_Part2.Data;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesLab.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages().AddRazorPagesOptions(options => {
+    options.Conventions.AddPageRoute("/Students/Index", "");
+});
 builder.Services.AddDbContext<SchoolContext>(options =>
      options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 var app = builder.Build();
 
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var dbContext = services.GetRequiredService<SchoolContext>();
+    dbContext.Database.Migrate();
+    try
+    {
+        DbInitializer.Initialize(dbContext);
+    }
+    catch (Exception ex)
+    {
+        // Handle any exceptions during initialization (e.g., logging).
+    }
+}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
